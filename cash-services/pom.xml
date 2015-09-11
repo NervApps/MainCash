@@ -15,45 +15,40 @@
             <version>${deltaspike.version}</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
             <groupId>org.apache.deltaspike.modules</groupId>
             <artifactId>deltaspike-jpa-module-impl</artifactId>
             <version>${deltaspike.version}</version>
             <scope>runtime</scope>
-        </dependency>
-        
+        </dependency>        
         <dependency>
             <groupId>org.apache.deltaspike.modules</groupId>
             <artifactId>deltaspike-data-module-api</artifactId>
             <version>${deltaspike.version}</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
             <groupId>org.apache.deltaspike.modules</groupId>
             <artifactId>deltaspike-data-module-impl</artifactId>
             <version>${deltaspike.version}</version>
             <scope>runtime</scope>
-        </dependency>
-        
+        </dependency>        
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>eclipselink</artifactId>
             <version>${eclipselink.version}</version>
             <scope>runtime</scope>
-        </dependency>
-        
+        </dependency>        
         <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-core</artifactId>
-            <version>${camel.version}</version>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cash-core</artifactId>
+            <version>${cash.core.version}</version>
         </dependency>
-            
         <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-cdi</artifactId>
-            <version>${camel.version}</version>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cash-services-api</artifactId>
+            <version>${cash.core.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
