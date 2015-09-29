@@ -14,8 +14,9 @@
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-        <maven.compiler.version>1.7</maven.compiler.version>
         <cash.core.version>1.0</cash.core.version>
         <cash.services.version>1.0</cash.services.version>
         <deltaspike.version>1.5.0</deltaspike.version>
