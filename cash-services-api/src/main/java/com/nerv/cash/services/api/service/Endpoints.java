@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.nerv.cash.services.api.endpoint;
+package com.nerv.cash.services.api.service;
 
+import com.nerv.cash.services.api.Context;
 import lombok.Getter;
 
 /**
@@ -15,13 +16,12 @@ public enum Endpoints {
     VERIFY_USERNAME("verify-username");
     
     @Getter private final String name;
-    private static final String PREFIX = "direct:";
 
     private Endpoints(String name) {
         this.name = name;
     }
     
     public String uri() {
-        return PREFIX + name;
+        return Context.ENDPOINT_PREFIX + name;
     }
 }
