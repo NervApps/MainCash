@@ -48,6 +48,18 @@
             <version>${cash.core.version}</version>
             <scope>compile</scope>
         </dependency>
+        <!-- Serviços de Negócio -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cash-business-facade</artifactId>
+            <version>${cash.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cash-auth</artifactId>
+            <version>${cash.core.version}</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

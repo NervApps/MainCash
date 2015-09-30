@@ -6,7 +6,7 @@
         <artifactId>cash</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>cash-services-api</artifactId>
+    <artifactId>cash-business-facade</artifactId>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
@@ -22,6 +22,11 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>cash-core</artifactId>
+            <version>${cash.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cash-services-api</artifactId>
             <version>${cash.core.version}</version>
         </dependency>
     </dependencies>

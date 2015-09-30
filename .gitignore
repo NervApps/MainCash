@@ -1,3 +1,5 @@
 /cash-services-api/target/
 /cash-services/target/
 /cash-web/target/
+/cash-services/cash-auth/target/
+/cash-business-facade/target/

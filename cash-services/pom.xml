@@ -8,6 +8,9 @@
     </parent>
     <artifactId>cash-services</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>cash-auth</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.apache.deltaspike.modules</groupId>
@@ -42,6 +45,11 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>cash-core</artifactId>
+            <version>${cash.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cash-business-facade</artifactId>
             <version>${cash.core.version}</version>
         </dependency>
         <dependency>

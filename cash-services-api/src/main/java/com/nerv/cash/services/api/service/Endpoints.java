@@ -13,7 +13,8 @@ import lombok.Getter;
  * @author Vitor
  */
 public enum Endpoints {
-    VERIFY_USERNAME("verify-username");
+    GET_BY_USR_PWD("get-by-usr-pwd"),
+    UPDATE_LAST_LOGIN("update-last-login");
     
     @Getter private final String name;
 

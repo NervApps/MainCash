@@ -5,10 +5,18 @@
  */
 package com.nerv.cash.core.entity;
 
+import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Classe que mapeia a tabela de usuários.
  * @author Vitor
  */
 public class User {
+    
+    @Getter @Setter private String login;
+    @Getter @Setter private String password;
+    @Getter @Setter private Date lastLogin;
     
 }

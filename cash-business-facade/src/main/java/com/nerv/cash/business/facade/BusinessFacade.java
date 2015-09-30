@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.nerv.cash.services.api.facade;
+package com.nerv.cash.business.facade;
 
+import com.nerv.cash.services.api.facade.Facade;
 import com.nerv.cash.services.api.service.Endpoints;
 import com.nerv.cash.services.api.service.Pipelines;
 import java.util.concurrent.Future;
