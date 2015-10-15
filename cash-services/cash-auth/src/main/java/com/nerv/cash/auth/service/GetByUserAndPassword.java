@@ -20,8 +20,8 @@ import org.apache.camel.cdi.ContextName;
  * Serviço que verifica se o usuário existe na base.
  * @author Vitor
  */
-@ApplicationScoped
-@ContextName(value = Context.CTX_NAME)
+//@ApplicationScoped
+//@ContextName(value = Context.CTX_NAME)
 public class GetByUserAndPassword extends Service<User> {
     
     @Inject @RequestScoped private UserDAO dao;

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+        </f:facet>
+        <title>Eva</title>
+        <h:outputScript name="js/layout.js" library="spark-layout" />
+        
+        <h:outputText value="&lt;!--[if gte IE 9]&gt;" escape="false" />
+            <style type="text/css">
+                /* styles for IE 9 */
+            </style>
+        <h:outputText value="&lt;![endif]--&gt;" escape="false" />
+
+        <ui:insert name="head" />
+    </h:head>
+
+    <h:body>
+        
+        <div id="layout-portlets-cover">
+            <div class="other-pages-box Container40 Responsive50 MarAuto Fnone TexAlCenter ShadowGray MarTop10"
+                 style="margin-top:5%; background-image:url(/spark/resources/spark-layout/images/loginpageillust.svg); background-repeat:no-repeat; background-position:center; background-size:cover;">
+                <h:form class="Container90 Fnone MarAuto TexAlCenter">
+                    <div class="EmptyBox50"></div>
+                    <h:graphicImage name="images/LOGO.svg" library="spark-layout" styleClass="MarAuto MarTop20 MarBot10"/>
+                    <div class="EmptyBox20"></div>
+                    <p:inputText placeholder="#{msg['user']}" 
+                                 styleClass="Container80 Fnone MarAuto Fs18"
+                                 value="#{loginBean.login}"
+                                 required="true" requiredMessage="#{msg['login.required']}"/>
+                    <div class="EmptyBox10"></div>
+                    <p:password placeholder="#{msg['password']}" 
+                                styleClass="Container80 Fnone MarAuto Fs18" feedback="false"
+                                value="#{loginBean.password}"
+                                required="true" requiredMessage="#{msg['password.required']}"/>
+                    <div class="EmptyBox30"></div>
+                    <p:messages/>
+                    <div class="Seperator"></div>
+                    <p:commandButton value="#{msg['login']}" styleClass="Fs16"
+                                     action="#{loginBean.doLogin()}"
+                                     update="@form"/>
+                    <p:button value="#{msg['password.forgot']}" styleClass="Fs16 RedButton" href="empty-page.xhtml"></p:button>
+                    <div class="EmptyBox10"></div>
+                </h:form>
+            </div>
+        </div>
+        
+        <h:outputStylesheet name="css/core-layout.css" library="spark-layout" />
+        <h:outputStylesheet name="css/font-awesome.css" library="spark-layout" />
+        <h:outputStylesheet name="css/animate.css" library="spark-layout" />
+        <h:outputStylesheet name="css/spark-layout.css" library="spark-layout" />
+    </h:body>
+
+</html>

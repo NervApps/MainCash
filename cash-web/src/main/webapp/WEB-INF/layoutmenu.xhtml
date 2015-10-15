@@ -1,0 +1,40 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ps="http://primefaces.org/spark"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+    <h:form>
+        <ps:menu>
+            <f:facet name="options">
+                <p:commandButton type="button" icon="fa fa-search Fs18 white" styleClass="Fright"/>
+                <p:inputText placeholder="Search" styleClass="Fright"/>    
+            </f:facet>
+
+            <p:submenu label="#{msg['menu.dashboard']}" icon="fa fa-rocket">
+                
+            </p:submenu>
+
+            <p:separator />
+
+            <p:submenu label="#{msg['menu.financial']}" icon="fa fa-money">
+                
+            </p:submenu>
+
+            <p:separator />
+
+            <p:submenu label="#{msg['menu.customer']}" icon="fa fa-users">
+                <p:menuitem value="Cadastro" icon="fa fa-microphone" url="#"/>
+            </p:submenu>
+            
+            <p:separator />
+
+            <p:submenu label="#{msg['menu.products']}" icon="fa fa-briefcase">
+                
+            </p:submenu>
+            
+        </ps:menu>
+    </h:form>
+
+</ui:composition>
