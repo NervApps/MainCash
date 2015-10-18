@@ -15,7 +15,7 @@ import org.apache.deltaspike.data.api.SingleResultType;
  * Camada de acesso a dados de usuário.
  * @author Vitor
  */
-@Repository
+//@Repository
 public interface UserDAO extends EntityRepository<User, Long> {
     /**
      * Obtém o usuário de acordo com o login ou null caso o login não exista.

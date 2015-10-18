@@ -28,8 +28,8 @@ public class LoginBean {
         email = new String();
     }
     
-    public void doLogin() {
-        
+    public String doLogin() {
+        return "empty-page?faces-redirect=true";
     }
     
 }
