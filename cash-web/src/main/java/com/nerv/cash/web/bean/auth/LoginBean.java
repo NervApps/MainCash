@@ -5,8 +5,13 @@
  */
 package com.nerv.cash.web.bean.auth;
 
+import com.nerv.cash.business.facade.auth.UserFacade;
+import com.nerv.cash.core.entity.User;
+import com.nerv.cash.web.context.WebContext;
+import com.nerv.cash.web.context.messages.login.LoginMessages;
 import com.nerv.cash.web.stereotype.Model;
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,17 +24,26 @@ public class LoginBean {
     
     @Getter @Setter private String login;
     @Getter @Setter private String password;
-    @Getter @Setter private String email;
+    
+    @Inject private UserFacade facade;
+    @Inject private LoginControl control;
+    @Inject private WebContext context;
+    @Inject private LoginMessages messages;
     
     @PostConstruct
     public void init() {
         login = new String();
         password = new String();
-        email = new String();
     }
     
     public String doLogin() {
-        return "empty-page?faces-redirect=true";
+        User usr = facade.doLogin(login, password);
+        if (usr != null) {
+            control.logon(usr);
+            return "empty-page?faces-redirect=true";
+        } else {
+            context.errorMessage(messages.userNotFound());
+            return null;
+        }
     }
-    
 }

@@ -5,14 +5,19 @@
  */
 package com.nerv.cash.auth.pipeline;
 
+import com.nerv.cash.services.api.Context;
 import com.nerv.cash.services.api.service.Endpoints;
 import com.nerv.cash.services.api.service.Pipeline;
 import com.nerv.cash.services.api.service.Pipelines;
+import javax.enterprise.context.ApplicationScoped;
+import org.apache.camel.cdi.ContextName;
 
 /**
  * Pipeline de logon do usuário na aplicação.
  * @author Vitor
  */
+@ApplicationScoped
+@ContextName(value = Context.CTX_NAME)
 public class LoginPipeline extends Pipeline {
 
     @Override
